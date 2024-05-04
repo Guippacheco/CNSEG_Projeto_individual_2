@@ -44,9 +44,17 @@
     * Representa os colaboradores das empresas parceiras que trabalham em conjunto com a sua organização.
     * Campos:
         * `ID_Colaborador`: Número inteiro (chave primária)
-        * `Nome`: String (255 caracteres)
+        * `Nome`: VARCHAR
         * `Cargo`: VARCHAR
         * `Setor`: VARCHAR
-        * `Email`: String (100 caracteres) - Validar formato email
-        * `Empresa Parceira_Área_ID`: Número inteiro (chave estrangeira para a tabela `Empresa-Parceira_Área`)
-      
+        * `Email`: VARCHAR
+        * `ID_Empresa`: Número inteiro (chave estrangeira para a tabela `Empresa`)
+
+**Relacionamentos:**
+* Um colaborador pertence a uma única empresa parceira (relação 1 para 1).
+* Uma empresa parceira pode ter diversos colaboradores (relação 1 para N).
+* Uma empresa parceira pode utilizar diversas Tecnolgias (relação 1 para N).
+* Uma empresa parceira pode ter diversos RegistrosTecnologia (relação 1 para N).
+* Um RegistrosTecnologia pode ter um único registro de empresa com sua respectiva tecnologia (relação 1 para 1).
+* Uma tecnologia pode ser utilizada em diversas empresas (relação 1 para N).
+* Uma tecnologia pode ser Registrada em diversos RegistrosTecnologia (relação 1 para N).
