@@ -58,3 +58,8 @@
 * Um RegistrosTecnologia pode ter um único registro de empresa com sua respectiva tecnologia (relação 1 para 1).
 * Uma tecnologia pode ser utilizada em diversas empresas (relação 1 para N).
 * Uma tecnologia pode ser Registrada em diversos RegistrosTecnologia (relação 1 para N).
+
+
+**Tecnolgias útilizadas**
+*brModelo
+*vsCode
