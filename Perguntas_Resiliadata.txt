@@ -1,0 +1,98 @@
+Perguntas.
+
+1. Quais são as entidades necessárias?;
+
+Empresa
+Tecnolgia
+RegistroTecnologia
+Colaborador
+
+
+2. Quais são os principais campos e seus respectivos tipos?;
+empresa:
+
+    Representa as empresas parceiras que colaboram com a sua organização.
+    Campos:
+        ID_Empresa: INT - Número inteiro (chave primária)
+        nome: VARCHAR
+        CNPJ: VARCHAR
+        Endereço: VARCHAR
+        Telefone: VARCHAR
+        Email: VARCHAR
+        Area_atuacao: VARCHAR
+
+Tecnologia:
+
+    Representa as tecnologias utilizadas pelas empresas parceiras.
+    Campos:
+        ID_Tecnologia:INT (chave primária)
+        Nome: VARCHAR
+        Area: VARCHAR
+        Descricao: VARCHAR
+
+RegistroTecnologia:
+
+    Registra quais técnologias as empresas parceiras parceiras estão útilizando em uma tabela separada.
+    Campos:
+        ID_RegistroTec: Número inteiro (chave primária)
+        ID_Tecnologia: Número inteiro (chave estrangeira para a tabela Tecnologia)
+        ID_Empresa: Número inteiro (chave estrangeira para a tabela Empresa)
+
+Colaborador:
+
+    Representa os colaboradores das empresas parceiras que trabalham em conjunto com a sua organização.
+    Campos:
+        ID_Colaborador: Número inteiro (chave primária)
+        Nome: VARCHAR
+        Cargo: VARCHAR
+        Setor: VARCHAR
+        Email: VARCHAR
+        ID_Empresa: Número inteiro (chave estrangeira para a tabela Empresa)
+
+
+
+3. Como essas entidades estão relacionadas?;
+
+Relacionamentos:
+
+    Um colaborador pertence a uma única empresa parceira (relação 1 para 1).
+    Uma empresa parceira pode ter diversos colaboradores (relação 1 para N).
+    Uma empresa parceira pode utilizar diversas Tecnolgias (relação 1 para N).
+    Uma empresa parceira pode ter diversos RegistrosTecnologia (relação 1 para N).
+    Um RegistrosTecnologia pode ter um único registro de empresa com sua respectiva tecnologia (relação 1 para 1).
+    Uma tecnologia pode ser utilizada em diversas empresas (relação 1 para N).
+    Uma tecnologia pode ser Registrada em diversos RegistrosTecnologia (relação 1 para N)
+
+
+4. Simule 2 registros para cada entidade.
+
+
+Empresas:
+ID_Empresa, Nome, CNPJ, Endereço, Telefone, Email, Area_atuacao
+1001, Empresa A, 123456789, Rua A, 123, 1234-5678, empresaA@example.com, Tecnologia da Informação
+1002, Empresa B, 987654321, Avenida B, 456, 9876-5432, empresaB@example.com, Marketing
+1003, Empresa C, 246810121, Rua C, 789, 3698-1472, empresaC@example.com, Desenvolvimento de Software
+
+
+Tecnologias:
+ID_Tecnologia, Nome, Area, Descricao
+3001, Java, Desenvolvimento de Software, Linguagem de programação orientada a objetos
+3002, Python, Desenvolvimento de Software, Linguagem de programação de alto nível
+3003, React, Desenvolvimento Web, Biblioteca JavaScript para construir interfaces de usuário
+
+RegistrosTecnologia:
+ID_RegistroTec, ID_Tecnologia, ID_Empresa
+4001, 3001, 1001
+4002, 3003, 1001
+4003, 3002, 1002
+4004, 3003, 1002
+4005, 3002, 1003
+4006, 3003, 1003
+
+Colaboradores:
+ID_Colaborador, Nome, Cargo, Setor, Email, ID_Empresa
+2001, João Silva, Desenvolvedor, TI, joao.silva@example.com, 1001
+2002, Maria Souza, Analista de Marketing, Marketing, maria.souza@example.com, 1002
+2003, Pedro Santos, Designer, Marketing, pedro.santos@example.com, 1002
+2004, Ana Lima, Analista de Sistemas, TI, ana.lima@example.com, 1001
+2005, Carlos Oliveira, Gerente de Projetos, TI, carlos.oliveira@example.com, 1003
