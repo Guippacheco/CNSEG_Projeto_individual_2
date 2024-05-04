@@ -14,10 +14,3 @@ Conceitual
 LÓGICO
 
 
-Funcionalidades:
-
-    Cadastro detalhado de empresas parceiras: Fornece uma visão abrangente das organizações que fazem parte do nosso ecossistema.
-
-    Registro de tecnologias: Classificação por área de aplicação (desenvolvimento web, dados, marketing, etc.), simplificando a identificação de tendências e competências.
-
-    Cadastro de colaboradores: Uma base de dados para gerenciar informações sobre os profissionais envolvidos, promovendo uma rede de talentos conectada.
